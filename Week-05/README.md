@@ -135,11 +135,11 @@ These reinforce Week 5 skills before the capstone CTF. **Only CTF flags are scor
 
 1. **Privesc lab on Metasploitable 2.** Stand up Metasploitable 2 on host-only networking. From a low-privilege foothold (the `msfadmin` user, or via the vsftpd backdoor), identify and document **two distinct** privilege-escalation paths to root. Each path: enumeration command, exploit command, resulting `id` output, and the technique class from [privilege-escalation.md](privilege-escalation.md). One page total.
 
-2. **Extend the Python port scanner.** Take [`code_examples/port_scanner.py`](code_examples/port_scanner.py) and add: argparse-driven CLI, `--confirm-authorized` gate, banner grabbing per port, threaded scanning, and graceful handling of `Ctrl+C`. Submit the modified script (do **not** modify the original) and a short README explaining what changed and why.
+2. **Extend the Python port scanner.** Take [`code_examples/port_scanner.py`](code_examples/port_scanner.py) and add: argparse-driven CLI, `--confirm-authorized` gate, banner grabbing per port, threaded scanning, and graceful handling of `Ctrl+C`. Save your modified copy locally (do **not** modify the original) with a short README explaining what changed and why.
 
 3. **Triage script + IR writeup.** Run the `triage.sh` script from [incident-response-lite.md](incident-response-lite.md) against your own Kali / Ubuntu VM. Write a one-page IR-style report on what's *normal* on that host: running services, listening ports, persistence locations, recently-modified files. This is your baseline — defenders can't recognise anomalies without one.
 
-4. **Capstone writeups (recommended).** After the CTF ends, write up **at least three** challenges you solved using [WRITEUP_TEMPLATE.md](WRITEUP_TEMPLATE.md). One writeup is a good minimum; three solidifies learning. The final-boss challenge counts if you attempted it.
+4. **Capstone writeups (optional).** After the CTF ends, write up challenges you solved using [WRITEUP_TEMPLATE.md](WRITEUP_TEMPLATE.md). Aim for at least three writeups if you want portfolio-quality notes; the final-boss challenge is a good one to document if you attempted it.
 
 ---
 

@@ -129,11 +129,11 @@ Complete these to reinforce the modules before the weekend CTF. **Only CTF flags
 
 1. **Burp environment ready.** Take a screenshot of Burp's HTTP history showing at least 10 requests against `http://127.0.0.1:5000` with the Burp CA installed (no HTTPS cert warnings on your browser when intercepting). Confirm the proxy works for both `curl --proxy http://127.0.0.1:8080` and your browser.
 
-2. **OWASP Top 10 mini-writeups.** Pick **five** of the OWASP 2021 categories. For each, write 4–6 sentences covering: (a) what the bug is, (b) a vulnerable code snippet, (c) the lab endpoint or PortSwigger lab that demonstrates it, and (d) the one-line fix. Submit as `owasp-writeups.md`.
+2. **OWASP Top 10 mini-writeups.** Pick **five** of the OWASP 2021 categories. For each, write 4–6 sentences covering: (a) what the bug is, (b) a vulnerable code snippet, (c) the lab endpoint or PortSwigger lab that demonstrates it, and (d) the one-line fix. Save as `owasp-writeups.md` for your own notes.
 
-3. **PortSwigger Academy track.** Complete **at least 5** Apprentice-level labs across SQL injection, XSS, Access Control, CSRF, and JWT (one per category). Submit a short table: lab name, technique used, payload, response excerpt that proved success.
+3. **PortSwigger Academy track.** Complete **at least 5** Apprentice-level labs across SQL injection, XSS, Access Control, CSRF, and JWT (one per category). Keep a short table: lab name, technique used, payload, response excerpt that proved success.
 
-4. **Manual testing report on the CSOT lab.** Apply the four-phase methodology from [manual-testing.md](manual-testing.md) to `127.0.0.1:5000`. Submit a one-page Markdown report containing at least three confirmed findings with Title, Endpoint, Repro (curl + Burp request), Impact, Fix. The eight CTF flags are evidence you found the bugs — but the report must explain each finding, not just list flags.
+4. **Manual testing report on the CSOT lab.** Apply the four-phase methodology from [manual-testing.md](manual-testing.md) to `127.0.0.1:5000`. Write a one-page Markdown report with at least three confirmed findings (Title, Endpoint, Repro with curl + Burp request, Impact, Fix). The eight CTF flags are your graded evidence — the report is optional practice to explain each finding, not just list flags.
 
 ---
 

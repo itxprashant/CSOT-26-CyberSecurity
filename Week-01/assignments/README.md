@@ -208,16 +208,20 @@ openssl rand -base64 "$length" | tr -dc 'A-Za-z0-9!@#$%^&*' | head -c "$length"
 - Use a regex to validate numeric input: `[[ "$var" =~ ^[0-9]+$ ]]`
 - The `date` command with format string creates timestamps: `date '+%Y-%m-%d %H:%M:%S'`
 
-### Self-check
+### Self-check (before the CTF)
 
-- [ ] Defaults work with no arguments
-- [ ] Length and count validation enforced
-- [ ] Passwords use all character classes and differ each run
-- [ ] `passwords.log` appends with timestamps
+- [ ] Correct shebang and executable
+- [ ] Default values work when no args provided
+- [ ] Validates length range (8–128) and count range (1–100)
+- [ ] Handles non-numeric input gracefully
+- [ ] Generated passwords contain all character classes and differ each run
+- [ ] Correct stdout formatting
+- [ ] Correctly appends to `passwords.log` with timestamp
+- [ ] Code structure and readability
 
 ---
 
-## Completion checklist
+## Practice checklist
 
 Before the weekend CTF, verify:
 

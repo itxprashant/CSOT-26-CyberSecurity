@@ -117,7 +117,7 @@ Work through these before the weekend CTF. **Only CTF flags are scored.**
 
 1. **Recon report on the lab network.** Run your own pipeline (bash, Python, or both — see [recon-automation.md](recon-automation.md)) against `127.0.0.1` while the docker-compose lab is up. Produce a one-page Markdown report listing open ports, services, versions, banners, and any anomalies. Include the script(s) you used.
 
-2. **Self-OSINT audit.** Run a passive OSINT pass on **yourself** (one search engine pass, [haveibeenpwned.com](https://haveibeenpwned.com/), one Sherlock-style username check on yourself, GitHub history for your email). Submit a short write-up of what you found and what you'll clean up. *Do this on yourself only — do not audit classmates.*
+2. **Self-OSINT audit.** Run a passive OSINT pass on **yourself** (one search engine pass, [haveibeenpwned.com](https://haveibeenpwned.com/), one Sherlock-style username check on yourself, GitHub history for your email). Keep a short write-up of what you found and what you'll clean up. *Do this on yourself only — do not audit classmates.*
 
 3. **Phishing red-flag walkthrough.** Pick any phishing email you've personally received (or one from the [APWG archive](https://apwg.org/phishing-archive/)). Walk through the red flags from [social-engineering-awareness.md](social-engineering-awareness.md): sender domain, link target, urgency, authentication headers if you have access. One page.
 

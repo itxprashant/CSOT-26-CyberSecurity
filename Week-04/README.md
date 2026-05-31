@@ -134,7 +134,7 @@ Use these to practice crypto and forensics workflows before the weekend CTF. **O
 
 3. **Forensics report on the lab artifacts.** Pick at least three of the Week 4 forensics/stego challenges (`hidden-png`, `metadata-leak`, `carved-note`, `pcap-cleartext`, `hash-identify`) and produce a single Markdown report walking through your analysis. Use the disciplined workflow from [digital-forensics.md](digital-forensics.md): `file` → metadata → strings → carving → specialised tool. Document each step.
 
-4. **Self secret-scan.** Run `trufflehog --only-verified` on every public repo under your GitHub username and submit a short note saying either "nothing found" or "found and rotated, here's what I did." Also install `pre-commit` with the `gitleaks` hook on your CSOT working repo so you can't accidentally commit secrets going forward.
+4. **Self secret-scan.** Run `trufflehog --only-verified` on every public repo under your GitHub username and note whether you found anything (and rotated if so). Also install `pre-commit` with the `gitleaks` hook on your CSOT working repo so you can't accidentally commit secrets going forward.
 
 ---
 

@@ -175,7 +175,7 @@ Each `Week-XX/` folder contains:
 - Topic modules (`.md` files) — Read in order
 - `assignments/` — Optional practice (not scored; CTF flags are)
 
-Weekend CTF challenges live in a separate `../CTFs/week-XX/` folder (not included in this repo), distributed alongside the course materials.
+Weekend CTF challenges live under `../CTFs/week-XX/` (one folder per week), each with challenge READMEs and supporting files.
 
 ---
 
