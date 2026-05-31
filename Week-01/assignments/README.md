@@ -1,15 +1,15 @@
 # Week 1 assignments — bash scripting
 
-**Not graded.** These exercises build the scripting skills you need for the Week 1 weekend CTF. Your course score comes from **CTF flags only** — complete these for practice, not for submission marks.
+These are **optional practice** exercises. They are not scored — **only weekend CTF flags count** toward your course standing. Complete them to build scripting habits before the CTF.
 
-Each script should be a standalone `.sh` file that can be run directly on your Kali/WSL environment.
+Share work with coordinators only if they ask for demos or study groups; there is no assignment submission portal requirement unless announced on Discord.
 
 **General requirements for all assignments:**
 - Include a proper shebang (`#!/bin/bash`) as the first line
 - Make the file executable (`chmod +x script.sh`)
 - Handle missing or invalid arguments gracefully (print usage and exit with code 1)
 - Use meaningful variable names
-- Test on your Kali/WSL environment before the weekend CTF
+- Test on your Kali/WSL environment before you consider them done
 
 ---
 
@@ -68,14 +68,13 @@ Total lines: 12,847
 - You can store results in an array or a temp file for sorting
 - `sort -rn` sorts numerically in reverse (largest first)
 
-### Self-check (before the CTF)
+### Self-check
 
-- [ ] Correct shebang and executable
-- [ ] Argument validation and error messages
-- [ ] Correctly finds `.log` files modified in the last 7 days
-- [ ] Accurate line counts (total and per-file)
-- [ ] Formatted output matching the specification
-- [ ] Code readability and structure
+- [ ] Shebang and executable bit set
+- [ ] Usage and error messages for bad/missing directory
+- [ ] Finds `.log` files modified in the last 7 days
+- [ ] Line counts match manual `wc -l` spot checks
+- [ ] Output format matches the specification
 
 ---
 
@@ -98,61 +97,13 @@ The script must collect and save the following sections:
 7. **Recent logins** — last 5 login entries (`last | head -5`)
 8. **Footer** — end marker with total generation time
 
-### Output
-
-Save everything to a file named `report_YYYYMMDD_HHMMSS.txt` in the current working directory.
+The output file must be named `sys_report_YYYYMMDD_HHMMSS.txt` in the current directory.
 
 ### Usage
 
 ```bash
 ./sys_report.sh
-# Output: Report saved to: report_20260525_143022.txt
-```
-
-### Expected file format
-
-```
-========================================
- SYSTEM REPORT
- Generated: Mon May 25 14:30:22 IST 2026
- Host: kali
- User: kali
-========================================
-
---- UPTIME ---
- 14:30:22 up 2 days,  3:42,  1 user,  load average: 0.12, 0.08, 0.05
-
---- DISK USAGE ---
-Filesystem      Size  Used Avail Use% Mounted on
-/dev/sda1        40G   12G   26G  32% /
-
---- MEMORY ---
-              total        used        free      shared  buff/cache   available
-Mem:          3.8Gi       1.2Gi       1.4Gi       180Mi       1.2Gi       2.3Gi
-Swap:         2.0Gi          0B       2.0Gi
-
---- PROCESSES ---
-Total running: 142
-
-Top 5 by CPU:
-%CPU  PID  COMMAND
- 2.3  1234 /usr/bin/Xorg
- 1.1  5678 /usr/bin/gnome-shell
- 0.8  9012 /usr/bin/pulseaudio
- 0.5  3456 /usr/bin/python3
- 0.2  7890 /usr/bin/bash
-
---- NETWORK (Listening Ports) ---
-tcp   LISTEN  0.0.0.0:22   users:(("sshd",pid=1234))
-tcp   LISTEN  127.0.0.1:3306   users:(("mysqld",pid=5678))
-
---- RECENT LOGINS ---
-kali     pts/0    Mon May 25 14:28   still logged in
-kali     pts/0    Mon May 25 10:15 - 12:30
-
-========================================
- Report generation time: 0.34 seconds
-========================================
+# Creates: sys_report_20260525_143022.txt
 ```
 
 ### Error handling
@@ -168,15 +119,12 @@ kali     pts/0    Mon May 25 10:15 - 12:30
 - Wrap section commands in functions for cleaner code
 - `command -v <cmd>` checks if a command exists
 
-### Self-check (before the CTF)
+### Self-check
 
-- [ ] Correct shebang and executable
 - [ ] Timestamped filename generated correctly
-- [ ] All 7 sections present with correct data
-- [ ] Error handling for missing commands
-- [ ] Formatted output (headers, separators, readable)
-- [ ] Measures and reports generation time
-- [ ] Code organization (functions, readability)
+- [ ] All sections present with sensible data
+- [ ] Graceful handling when optional commands are missing
+- [ ] Readable headers and footer with generation time
 
 ---
 
@@ -294,3 +242,7 @@ Before the weekend CTF, verify:
 3. **Use ShellCheck** — paste your script at shellcheck.net to catch common bugs
 4. **Read error messages** — bash errors tell you the line number and what went wrong
 5. **Use `set -x`** — run `bash -x script.sh` to see exactly what bash is executing
+
+---
+
+**Scoring reminder:** Weekend CTF flags (`csot26{...}`) are the only scored component for Week 1. These scripts prepare you for scripting-themed CTF challenges.

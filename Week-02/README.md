@@ -111,9 +111,9 @@ sudo docker compose down
 
 ---
 
-## Assignments (practice only — not graded)
+## Assignments (practice — not scored)
 
-Recommended before the weekend CTF for skill-building. **Your score comes from CTF flags only.**
+Work through these before the weekend CTF. **Only CTF flags are scored.**
 
 1. **Recon report on the lab network.** Run your own pipeline (bash, Python, or both — see [recon-automation.md](recon-automation.md)) against `127.0.0.1` while the docker-compose lab is up. Produce a one-page Markdown report listing open ports, services, versions, banners, and any anomalies. Include the script(s) you used.
 
@@ -189,6 +189,41 @@ Recommended before the weekend CTF for skill-building. **Your score comes from C
 | `jq` errors with `parse error` | Input isn't valid JSON; check with `jq . file.json` first or pipe through `python3 -m json.tool` |
 | Browser blocks `crt.sh` JSON | Use `curl -s "https://crt.sh/?q=%25.example.com&output=json"`; some browsers expect HTML |
 | Scans on TryHackMe time out | You may not be on their VPN; check with `ip addr | grep tun0` |
+
+---
+
+## Advanced Reading
+
+For those who want to go deeper this week:
+
+### Books
+
+- *Open Source Intelligence Techniques* — Michael Bazzell — professional OSINT methodology
+- *Nmap Network Scanning* — Gordon Lyon — definitive guide to nmap
+
+### Online courses / paths
+
+- [TryHackMe — OSINT](https://tryhackme.com/) — OhSINT, Searchlight, WebOSINT rooms
+- [SANS SEC487](https://www.sans.org/cyber-security-courses/open-source-intelligence-gathering/) — OSINT certification track (overview)
+- [Bellingcat](https://www.bellingcat.com/) — published investigations as case studies
+
+### Tools to explore
+
+- [Maltego](https://www.maltego.com/) — link analysis (community edition)
+- [theHarvester](https://github.com/laramies/theHarvester) — email and subdomain harvesting
+- [SpiderFoot](https://www.spiderfoot.net/) — automated OSINT orchestration
+- [Recon-ng](https://github.com/lanmaster53/recon-ng) — modular recon framework
+
+### Challenge platforms
+
+- [Trace Labs](https://www.tracelabs.org/) — OSINT-for-good CTF events
+- [HackTheBox — Starting Point](https://www.hackthebox.com/) — every box begins with nmap
+- [contactrika OSINT puzzles](https://contactrika.github.io/)
+
+### Videos / creators
+
+- [The Cyber Mentor](https://www.youtube.com/c/TheCyberMentor) — recon and enumeration walkthroughs
+- [NahamSec](https://www.youtube.com/c/Nahamsec) — recon for bug bounty
 
 ---
 

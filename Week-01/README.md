@@ -72,13 +72,13 @@ These reinforce what you read in the modules. Do them on Wed–Thu.
 
 ---
 
-## Assignments (practice only — not graded)
+## Assignments (practice — not scored)
 
-Recommended before the weekend CTF for skill-building. **Your score comes from CTF flags only.**
+Complete these before the weekend CTF to build muscle memory. **Only CTF flags are scored**; assignments are for your own practice and optional sharing with coordinators if they ask for demos.
 
 1. **Scavenger hunt** — Extract the [scavenger_hunt.tar.xz](../../CTFs/week-01/scavenger_hunt.tar.xz) archive and follow the trail of clues across nested directories. Requires: `tar`, `find`, `grep`, `cat`, reading hidden files.
 
-2. **Bash scripts** — Three scripting tasks of increasing complexity. See [assignments/README.md](assignments/README.md) for full specifications, examples, and self-check lists.
+2. **Bash scripts** — Three scripting tasks of increasing complexity. See [assignments/README.md](assignments/README.md) for full specifications and examples.
 
 3. **Account setup** — Create accounts on all four platforms below and bookmark three upcoming CTFs from CTFtime:
    - [Hack The Box](https://www.hackthebox.com/)
@@ -139,6 +139,41 @@ Recommended before the weekend CTF for skill-building. **Your score comes from C
 | Docker not working | Ensure Docker Desktop is running; try `sudo` on Linux |
 | Command not found | Install with `sudo apt install <package-name>` |
 | Bandit SSH won't connect | Check port: `ssh -p 2220 bandit0@bandit.labs.overthewire.org` |
+
+---
+
+## Advanced Reading
+
+For those who want to go deeper this week:
+
+### Books
+
+- *The Linux Command Line* — William Shotts — [linuxcommand.org](https://linuxcommand.org/tlcl.php) (free PDF)
+- *Linux Basics for Hackers* — OccupyTheWeb — Kali-focused practical skills
+
+### Online courses / paths
+
+- [TryHackMe — Complete Beginner](https://tryhackme.com/path/outline/presecurity) — structured onboarding
+- [HackTheBox — Starting Point](https://www.hackthebox.com/) — guided machines after invite challenge
+- [W3Schools Cybersecurity](https://www.w3schools.com/cybersecurity/) — concise concept overviews
+
+### Tools to explore
+
+- [tmux](https://github.com/tmux/tmux/wiki) — terminal multiplexer for CTF sessions
+- [ExplainShell](https://explainshell.com/) — decode complex one-liners
+- [CyberChef](https://gchq.github.io/CyberChef/) — encodings preview for later weeks
+
+### Challenge platforms
+
+- [OverTheWire Bandit](https://overthewire.org/wargames/bandit/) — levels 16–34 after finishing 0–15
+- [cmdchallenge](https://cmdchallenge.com/) — quick CLI puzzles
+- [picoCTF Gym — General Skills](https://play.picoctf.org/practice)
+
+### Videos / creators
+
+- [NetworkChuck](https://www.youtube.com/c/NetworkChuck) — Linux and cybersecurity fundamentals
+- [John Hammond](https://www.youtube.com/c/JohnHammond010) — beginner CTF walkthroughs
+- [IppSec](https://www.youtube.com/c/ippsec) — HackTheBox machines (attempt first, then watch)
 
 ---
 

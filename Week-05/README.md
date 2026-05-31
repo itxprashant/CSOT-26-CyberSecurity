@@ -1,6 +1,6 @@
-# Week 5 — Exploitation, post-exploitation & incident response
+# Week 5 — Systems security, reverse engineering, binary exploitation & capstone
 
-The capstone. You've spent four weeks building offensive primitives: Linux comfort and scripting (Week 1), recon and network discovery (Week 2), web exploitation (Week 3), and reverse-engineering / forensics fundamentals (Week 4). Week 5 puts it together — what happens *after* you land a shell, how defenders see the same activity, and how to write up everything you did. The weekend CTF is a 10-challenge capstone that recaps every prior week and adds a final boss.
+The capstone. You've spent four weeks building offensive primitives: Linux comfort and scripting (Week 1), recon and network discovery (Week 2), web exploitation (Week 3), and cryptography / forensics fundamentals (Week 4). Week 5 puts it together — what happens *after* you land a shell, how native binaries are reversed and exploited, how defenders see the same activity, and how to write up everything you did. The weekend CTF is a 10-challenge capstone that recaps every prior week and adds a final boss.
 
 ---
 
@@ -31,6 +31,10 @@ By the end of this week, you should be able to:
 - [ ] Triage a suspicious Linux host with a first-pass evidence script
 - [ ] Write a polished CTF / IR writeup using `WRITEUP_TEMPLATE.md`
 - [ ] Articulate the legal lines (IT Act 2000 §43, §66, §66F) for every offensive technique in the week
+- [ ] Read basic x86-64 assembly and identify function calls, loops, and conditional branches in disassembly
+- [ ] Use Ghidra (or equivalent) to reverse a simple CrackMe-style binary and recover the check logic
+- [ ] Explain stack-based buffer overflows and identify protections with `checksec`
+- [ ] Write a basic stack exploit with pwntools (offset + controlled return address) on an authorized lab binary
 
 ---
 
@@ -47,9 +51,11 @@ Each module ends with a `Next module` link, so you can read them as a path or ju
 | 5 | [cloud-metadata-awareness.md](cloud-metadata-awareness.md) | IMDS endpoints per cloud, SSRF → metadata chain, IMDSv1 vs v2, Capital One case study, defences | 45 min |
 | 6 | [detection-evasion-awareness.md](detection-evasion-awareness.md) | Log layers, noise level of Week 5 tools, AV vs EDR, obfuscation reality check, ATT&CK Defense Evasion | 45 min |
 | 7 | [incident-response-lite.md](incident-response-lite.md) | PICERL lifecycle, junior responder toolkit, Linux + Windows triage, chain of custody, when to escalate | 60 min |
-| 8 | [WRITEUP_TEMPLATE.md](WRITEUP_TEMPLATE.md) | Polished CTF / IR writeup template, with a worked example | 15 min |
+| 8 | [reverse-engineering-basics.md](reverse-engineering-basics.md) | ELF format, `strings`/`objdump`, Ghidra workflow, x86-64 assembly reading, CrackMe practice | 50 min |
+| 9 | [binary-exploitation-intro.md](binary-exploitation-intro.md) | Stack layout, buffer overflows, protections (NX/ASLR/canary), pwntools, format strings overview | 55 min |
+| 10 | [WRITEUP_TEMPLATE.md](WRITEUP_TEMPLATE.md) | Polished CTF / IR writeup template, with a worked example | 15 min |
 
-**Total reading time:** ~6.5 hours (spread across Mon–Wed).
+**Total reading time:** ~7.5 hours (spread across Mon–Thu).
 
 ---
 
@@ -63,8 +69,8 @@ Day 2 (Tue):  Modules 3–4 (post-ex + python)
               + TryHackMe "Linux PrivEsc" room + extend the port scanner
 Day 3 (Wed):  Modules 5–6 (cloud metadata + detection/evasion)
               + read 2-3 entries from the DFIR Report; map them to ATT&CK
-Day 4 (Thu):  Module 7 (IR) + start drafting capstone writeup
-              + TryHackMe "SOC Level 1" first few rooms
+Day 4 (Thu):  Modules 7–9 (IR + reverse engineering + binary exploitation intro)
+              + Ghidra on a CrackMe; one pwnable.kr toddler challenge
 Day 5 (Fri):  Polish writeups, run triage script against your own VMs, pre-CTF practice
 Day 6–7:      Weekend capstone CTF (10 challenges, 4–6 hours)
               + final writeup using WRITEUP_TEMPLATE.md
@@ -91,6 +97,11 @@ Critical for Week 5 — most of the muscle memory comes from real boxes, not rea
 | PortSwigger Web Security Academy | If Week 3 web didn't stick — the SSRF chapter ties into Week 5's cloud module | [portswigger.net](https://portswigger.net/web-security) |
 | The DFIR Report | Read 3 case studies; map each one to ATT&CK | [thedfirreport.com](https://thedfirreport.com/) |
 | CTFtime | Find an upcoming weekend CTF to play with your team after capstone | [ctftime.org](https://ctftime.org/) |
+| pwnable.kr | Toddler / bof / passcode — stack overflow fundamentals | [pwnable.kr](http://pwnable.kr/) |
+| picoCTF — Pwn | Beginner binary challenges after [binary-exploitation-intro.md](binary-exploitation-intro.md) | [picoctf.org](https://picoctf.org/) |
+| pwn.college | Full university-style binary exploitation course (post-CSOT depth) | [pwn.college](https://pwn.college/) |
+| crackmes.one | Difficulty 1–2 CrackMes for [reverse-engineering-basics.md](reverse-engineering-basics.md) | [crackmes.one](https://crackmes.one/) |
+| TryHackMe — Buffer Overflow Prep / Intro to x86-64 | Guided pwn + RE | [tryhackme.com](https://tryhackme.com/) |
 
 ---
 
@@ -108,18 +119,19 @@ Verify:
 
 ```bash
 ls Week-05/
-# code_examples  cloud-metadata-awareness.md  detection-evasion-awareness.md
-# incident-response-lite.md  metasploit-basics.md  post-exploitation.md
-# privilege-escalation.md  python-pentesting.md  README.md  WRITEUP_TEMPLATE.md
+# binary-exploitation-intro.md  reverse-engineering-basics.md  code_examples/
+# cloud-metadata-awareness.md  detection-evasion-awareness.md  incident-response-lite.md
+# metasploit-basics.md  post-exploitation.md  privilege-escalation.md
+# python-pentesting.md  README.md  WRITEUP_TEMPLATE.md
 ```
 
 No `docker-compose.yml`, no `_infra/` — by design.
 
 ---
 
-## Assignments (practice only — not graded)
+## Assignments (practice — not scored)
 
-Recommended before the capstone CTF for skill-building. **Your score comes from CTF flags only.**
+These reinforce Week 5 skills before the capstone CTF. **Only CTF flags are scored** (including writeups only if your coordinators ask for them separately — check Discord).
 
 1. **Privesc lab on Metasploitable 2.** Stand up Metasploitable 2 on host-only networking. From a low-privilege foothold (the `msfadmin` user, or via the vsftpd backdoor), identify and document **two distinct** privilege-escalation paths to root. Each path: enumeration command, exploit command, resulting `id` output, and the technique class from [privilege-escalation.md](privilege-escalation.md). One page total.
 
@@ -186,6 +198,10 @@ Categorisation notes:
 | LOLBins / GTFOBins | Living off the land — the modern attacker's default |
 | Authorization first | Every Week 5 technique is illegal off-scope (IT Act 2000 §43, §66, §66F) |
 | Default tools are loud | "Evasion" is a delay, not invisibility — assume EDR sees you |
+| `strings` before Ghidra | Plaintext clues beat disassembly time |
+| Stack canary | Corrupting the return address without the canary crashes first |
+| NX + ret2win | Jump to existing code (`win`) instead of shellcode on the stack |
+| pwntools `cyclic` | Finds overflow offset without manual guessing |
 
 ---
 
@@ -221,7 +237,9 @@ You finish the course here. The next step is yours to choose. Concretely:
 | **Blue team / detection engineering** | Week 5 detection module + Sigma rules + Atomic Red Team → BTL1 → SC-200 / GIAC GCDA |
 | **Crypto** | Cryptohack + cryptopals → academic study (PRPs, ZK, lattice attacks) |
 | **Cloud security** | Week 5 cloud module + CloudGoat + LocalStack → AWS Security Specialty → Azure SC-100 |
-| **Mobile / OS internals** | Pwntools + binary exploitation → ROP school → pwn.college |
+| **Reverse engineering** | Week 5 RE module + crackmes.one → Microcorruption → reversing.kr |
+| **Binary exploitation (PWN)** | Week 5 pwn module + pwnable.kr → ROP Emporium → pwn.college → OSED track |
+| **Mobile / OS internals** | RE fundamentals → firmware extraction → dedicated mobile courses |
 
 You don't have to pick now — most CSOT graduates explore two or three of the above for six months before committing. But pick *something*; depth beats breadth in the second year.
 
@@ -251,17 +269,61 @@ CSOT doesn't endorse a specific cert. Pick what aligns with the specialisation a
 - **Open-source security audits:** Pick a small project you use, read its security policy, report findings responsibly.
 - **CTF challenge authoring:** Submit challenges to next year's CSOT. Authors learn more than solvers.
 
-### Recommended further reading
+## Advanced Reading
 
-- [PEN-200 Course Guide / OSCP curriculum](https://www.offsec.com/courses/pen-200/) — the closest thing to "what you should know after Week 5"
-- [HackTricks](https://book.hacktricks.xyz/) — encyclopedia; the most-used reference in the industry
-- [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings) — payload library per attack class
-- [The DFIR Report](https://thedfirreport.com/) — public IR writeups; read 5+ over the year
-- [MITRE ATT&CK matrix](https://attack.mitre.org/) — the framework everyone references
-- [Awesome Pentest](https://github.com/enaqx/awesome-pentest) — curated tool list
+For those who want to go deeper this week (and after CSOT):
+
+### Books
+
+- *Hacking: The Art of Exploitation* — Jon Erickson — stack, memory, and exploitation fundamentals
+- *Practical Binary Analysis* — Dennis Andriesse — RE with Ghidra and scripting
+- *The Shellcoder's Handbook* — advanced native exploitation (post-intro)
 - *The Hacker Playbook 3* — Peter Kim — practical red-team workflows
-- *Red Team Field Manual* — short, dense reference card
-- *Blue Team Field Manual* — the defender counterpart
+- *Red Team Field Manual* / *Blue Team Field Manual* — dense reference cards
+
+### Online courses / paths
+
+- [PEN-200 / OSCP curriculum](https://www.offsec.com/courses/pen-200/) — industry-standard offensive certification path
+- [pwn.college](https://pwn.college/) — full binary exploitation course (free)
+- [ROP Emporium](https://ropemporium.com/) — return-oriented programming after first stack overflows
+- [nightmare (guyinatuxedo)](https://guyinatuxedo.github.io/) — exploit technique notes by topic
+- TryHackMe — Offensive Pentesting / Junior Penetration Tester paths
+
+### Tools to explore
+
+- [Ghidra](https://ghidra-sre.org/) — primary RE platform for this course
+- [pwntools](https://docs.pwntools.com/) — exploit development in Python
+- [angr](https://angr.io/) — symbolic execution (advanced automation)
+- [ropper](https://github.com/sashs/Ropper) / [ROPgadget](https://github.com/JonathanSalwan/ROPgadget) — ROP chain building
+- [one_gadget](https://github.com/david942/one_gadget) — libc one-shot shell offsets
+
+### Challenge platforms
+
+- [pwnable.kr](http://pwnable.kr/) · [pwnable.tw](https://pwnable.tw/) — classic pwn wargames
+- [reversing.kr](http://reversing.kr/) — reverse engineering challenges
+- [Microcorruption](https://microcorruption.com/) — assembly puzzle game
+- [how2heap](https://github.com/shellphish/how2heap) — heap exploitation education (advanced)
+
+### Videos / creators
+
+- [LiveOverflow](https://www.youtube.com/c/LiveOverflow) — RE and binary exploitation playlists
+- [IppSec](https://www.youtube.com/c/ippsec) — HackTheBox walkthroughs (full attack chains)
+- [John Hammond](https://www.youtube.com/c/JohnHammond010) — CTF and malware RE content
+
+### Reference
+
+- [HackTricks](https://book.hacktricks.xyz/) — encyclopedia for privesc, post-ex, and more
+- [MITRE ATT&CK](https://attack.mitre.org/) — map techniques to defender taxonomy
+- [The DFIR Report](https://thedfirreport.com/) — real incident writeups
+
+### Certifications (optional)
+
+| Cert | Focus |
+|------|-------|
+| **OSCP (PEN-200)** | Hands-on pentest — natural follow-up after Week 5 |
+| **eJPTv2 / HTB CPTS** | Junior offensive credentials |
+| **OSED** | Windows / advanced exploit development (after ROP) |
+| **BTL1** | Blue team / DFIR counterpart |
 
 ---
 

@@ -123,9 +123,9 @@ sudo docker compose down
 
 ---
 
-## Assignments (practice only — not graded)
+## Assignments (practice — not scored)
 
-Recommended before the weekend CTF for skill-building. **Your score comes from CTF flags only.**
+Complete these to reinforce the modules before the weekend CTF. **Only CTF flags are scored.**
 
 1. **Burp environment ready.** Take a screenshot of Burp's HTTP history showing at least 10 requests against `http://127.0.0.1:5000` with the Burp CA installed (no HTTPS cert warnings on your browser when intercepting). Confirm the proxy works for both `curl --proxy http://127.0.0.1:8080` and your browser.
 
@@ -201,6 +201,46 @@ Recommended before the weekend CTF for skill-building. **Your score comes from C
 | JWT base64 won't decode | Add `==` padding back, swap `-_` for `+/` first |
 | sqlmap "the back-end DBMS is …" then nothing | Increase `--level` and `--risk` (with permission), or you've already confirmed and need to add `--dump` |
 | Lab page shows but `/api/notes` returns the SQLite error | The Flask app sometimes needs `init_db()`; restart the container |
+
+---
+
+## Advanced Reading
+
+For those who want to go deeper this week:
+
+### Books
+
+- *The Web Application Hacker's Handbook* — Stuttard & Pinto — classic web security reference
+- *Bug Bounty Bootcamp* — Vickie Li — practical web finding and reporting
+- *Real-World Bug Hunting* — Peter Yaworski — case studies from HackerOne
+
+### Online courses / paths
+
+- [PortSwigger Web Security Academy](https://portswigger.net/web-security) — complete all Apprentice and Practitioner labs
+- [HackTheBox Academy — Bug Bounty Hunter](https://academy.hackthebox.com/)
+- [OWASP Web Security Testing Guide](https://owasp.org/www-project-web-security-testing-guide/)
+
+### Tools to explore
+
+- [ffuf](https://github.com/ffuf/ffuf) · [nuclei](https://github.com/projectdiscovery/nuclei) — fast fuzzing and templated scanning
+- [Caido](https://caido.io/) · [mitmproxy](https://mitmproxy.org/) — alternative intercept proxies
+- [sqlmap](https://sqlmap.org/) — automated SQLi (authorized targets only)
+
+### Challenge platforms
+
+- [Google Gruyere](https://google-gruyere.appspot.com/)
+- [OWASP Juice Shop](https://owasp.org/www-project-juice-shop/)
+- [HackTheBox — Web category](https://www.hackthebox.com/) easy machines
+
+### Videos / creators
+
+- [STÖK](https://www.youtube.com/c/STOKfredrik) — bug bounty methodology
+- [PwnFunction](https://www.youtube.com/c/PwnFunction) — animated web vuln explanations
+
+### Certifications (optional)
+
+- **PortSwigger certifications** (BSCP path) — web-focused, hands-on
+- **eWPT** — web penetration testing entry credential
 
 ---
 

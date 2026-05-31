@@ -124,9 +124,9 @@ If `hashcat` complains about devices in your VM, install `pocl-opencl-icd`. If `
 
 ---
 
-## Assignments (practice only — not graded)
+## Assignments (practice — not scored)
 
-Recommended before the weekend CTF for skill-building. **Your score comes from CTF flags only.**
+Use these to practice crypto and forensics workflows before the weekend CTF. **Only CTF flags are scored.**
 
 1. **Crypto write-up.** Pick three of the Week 4 crypto challenges (`caesar-shift`, `encoding-chain`, `vigenere-notes`, `xor-single-byte`, `weak-rsa-mini`) and write a one-page solution per challenge. Include: what you observed, what tool/technique you tried first, what worked, and a `bash`/`python3` snippet that reproduces the solve. Include the recovered flags.
 
@@ -212,8 +212,43 @@ Recommended before the weekend CTF for skill-building. **Your score comes from C
 
 ---
 
+## Advanced Reading
+
+For those who want to go deeper this week:
+
+### Books
+
+- *Serious Cryptography* — Jean-Philippe Aumasson — modern crypto for practitioners
+- *Applied Cryptography* — Bruce Schneier — reference (dense; skim by topic)
+- *File System Forensic Analysis* — Brian Carrier — deep forensics (optional)
+
+### Online courses / paths
+
+- [Cryptohack](https://cryptohack.org/) — all tracks beyond RSA Starter
+- [Cryptopals](https://cryptopals.com/) — sets 3–8 (block ciphers, padding oracles, CBC)
+- [CyberDefenders](https://cyberdefenders.org/) — blue-team forensics labs
+
+### Tools to explore
+
+- [SageMath](https://www.sagemath.org/) — mathematical crypto attacks
+- [z3](https://github.com/Z3Prover/z3) — SMT solver for constraint challenges
+- [Volatility 3](https://github.com/volatilityfoundation/volatility3) — memory forensics (preview for IR)
+
+### Challenge platforms
+
+- [Mystery Twister](https://www.mysterytwister.org/) — crypto puzzles
+- [Lattice Challenge](https://latticechallenge.org/) — advanced lattice crypto
+- [CTFlearn — Forensics](https://ctflearn.com/)
+
+### Videos / creators
+
+- [LiveOverflow](https://www.youtube.com/c/LiveOverflow) — crypto and CTF math explained visually
+- [Computerphile](https://www.youtube.com/user/Computerphile) — conceptual crypto primers
+
+---
+
 ## What's next
 
-Week 5 takes the forensics + crypto mindset and points it at exploitation: privilege escalation, post-exploitation, and the wider topic of running offensive tooling responsibly. The cryptographic primitives you saw here (hashes, JWTs, weak RSA) reappear as **attack surfaces** — most modern privesc paths involve a weak credential or a misused signature somewhere along the chain. The forensic discipline you built (artifact analysis, chain of custody) becomes the **blue-team mirror** of those same techniques.
+Week 5 takes the forensics + crypto mindset and points it at exploitation: privilege escalation, reverse engineering, binary exploitation, post-exploitation, and incident response. The cryptographic primitives you saw here (hashes, JWTs, weak RSA) reappear as **attack surfaces** — most modern privesc paths involve a weak credential or a misused signature somewhere along the chain. The forensic discipline you built (artifact analysis, chain of custody) becomes the **blue-team mirror** of those same techniques.
 
-**Next:** [Week 5 — Exploitation, post-exploitation, and incident response](../Week-05/)
+**Next:** [Week 5 — Systems security, reverse engineering, binary exploitation & capstone](../Week-05/)

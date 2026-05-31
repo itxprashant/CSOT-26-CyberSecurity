@@ -2,7 +2,7 @@
 
 Welcome to the **Cybersecurity** track of CSOT 2026, led by **DevClub IIT Delhi**.
 
-This is a five-week, hands-on introduction to practical security — covering everything from how attackers think to how defenders respond. You will learn OSINT, web application testing, cryptography, digital forensics, Linux fundamentals, and scripting — all tied together with **weekend CTF competitions** that test what you learned each week.
+This is a five-week, hands-on introduction to practical security — covering everything from how attackers think to how defenders respond. You will learn OSINT, web application testing, cryptography, digital forensics, Linux fundamentals, scripting, reverse engineering, and introductory binary exploitation — all tied together with **weekend CTF competitions** that test what you learned each week.
 
 ---
 
@@ -21,13 +21,12 @@ Software engineers who understand security build better systems. Whether you end
 
 | | |
 |---|---|
-| **Format** | Weekly reading modules → external platform practice → optional assignments → weekend CTF |
-| **Grading** | Weekend CTF flags only (assignments are practice, not submitted for marks) |
+| **Format** | Weekly reading modules → external platform practice → optional assignments → weekend CTF (scored) |
 | **Duration** | 5 weeks (Mon–Sun cycles) |
 | **Prerequisites** | Basic programming in any language; curiosity about how systems work |
 | **Flag format** | `csot26{...}` (all CTF flags follow this format) |
 | **Communication** | Course Discord server (link shared by coordinators) |
-| **Submission** | Flags submitted via the CTF platform only |
+| **Submission** | CTF flags submitted via the course CTF platform (assignments are practice only, not scored) |
 
 **Resources:** [RESOURCES.md](RESOURCES.md) — curated links organized by week and difficulty level
 
@@ -41,7 +40,7 @@ Software engineers who understand security build better systems. Whether you end
 | 2 | OSINT & open-source investigation | Google dorking, DNS enumeration, WHOIS, network scanning with nmap, building intelligence from public data | [Week-02/](Week-02/) |
 | 3 | Web application security | HTTP internals, OWASP Top 10 vulnerabilities, Burp Suite interception, SQL injection, XSS, API and JWT attacks | [Week-03/](Week-03/) |
 | 4 | Cryptography, steganography & forensics | Classical and modern ciphers, hash cracking, hidden data in files, log analysis, PCAP inspection | [Week-04/](Week-04/) |
-| 5 | Systems security & capstone CTF | Privilege escalation, post-exploitation, Python automation, team-based multi-category CTF, writeup documentation | [Week-05/](Week-05/) |
+| 5 | Systems security, RE, PWN & capstone CTF | Privilege escalation, reverse engineering, binary exploitation intro, post-exploitation, IR, team capstone CTF | [Week-05/](Week-05/) |
 
 ### Weekly rhythm
 
@@ -49,12 +48,12 @@ Software engineers who understand security build better systems. Whether you end
 |------|----------|---------|
 | Mon–Tue | **Study** | Read that week's modules in order; complete any setup tasks; take notes on new concepts |
 | Wed–Thu | **External practice** | Work through guided labs on TryHackMe, PortSwigger Academy, picoCTF Gym, or OverTheWire |
-| Fri | **Practice & prep** | Optional weekly assignments for skill-building; review hints for upcoming CTF; form teams if needed |
+| Fri | **Practice & prep** | Optional weekly assignments for hands-on practice; review hints for upcoming CTF; form teams if needed |
 | Sat–Sun | **Weekend CTF** | 2–3 hour jeopardy-style competition (8 challenges per week; teams allowed in Week 5) |
 
 ### Time commitment
 
-Expect **6–10 hours per week**: ~2 hours reading modules, ~2–3 hours on external platforms, ~1–2 hours on optional practice assignments (recommended but not graded), and ~2–3 hours on the weekend CTF (your score for the week). You can go deeper — the resources document has advanced material for every topic.
+Expect **6–10 hours per week**: ~2 hours reading modules, ~2–3 hours on external platforms, ~1–2 hours on optional practice assignments, and ~2–3 hours on the weekend CTF (the only scored component). You can go deeper — the resources document has advanced material for every topic.
 
 ---
 
@@ -106,13 +105,13 @@ Cryptography protects data — and when it's implemented poorly, attackers explo
 
 ---
 
-## Week 5 — Systems security & capstone
+## Week 5 — Systems security, reverse engineering, binary exploitation & capstone
 
-**Goal:** Tie everything together with privilege escalation, automation, and a team-based capstone CTF.
+**Goal:** Tie everything together with privilege escalation, native-code skills (RE and pwn), automation, defensive IR, and a team-based capstone CTF.
 
-This week covers what happens after initial access — escalating privileges, maintaining persistence, covering tracks, and how defenders detect these actions. You'll also automate common tasks with Python and participate in a team capstone CTF that draws from all 5 weeks.
+This week covers what happens after initial access — escalating privileges, reversing binaries, introductory stack exploitation, post-exploitation, and how defenders detect these actions. You'll automate common tasks with Python and participate in a team capstone CTF that draws from all 5 weeks.
 
-**Key topics:** Linux privilege escalation (SUID, cron, sudo misconfigs), post-exploitation, Python scripting for pentesting, Metasploit basics, cloud metadata awareness, team CTF strategy, writeup documentation.
+**Key topics:** Linux privilege escalation (SUID, cron, sudo misconfigs), Ghidra and static RE, buffer overflows and pwntools, post-exploitation, Python scripting for pentesting, Metasploit basics, cloud metadata awareness, incident response lite, team CTF strategy, writeup documentation.
 
 → [Week-05/README.md](Week-05/README.md) · [Writeup template](Week-05/WRITEUP_TEMPLATE.md)
 
@@ -127,7 +126,7 @@ These rules are non-negotiable. Violating them can result in removal from the co
 3. **No flag leaking** — Do not post live CTF flags publicly before the event ends. After the CTF closes, writeups are encouraged.
 4. **Responsible disclosure** — If you accidentally discover a real vulnerability outside course scope, report it responsibly to the system owner. Do not exploit it.
 5. **No real-world harm** — Never use course skills to access others' accounts, data, or systems without permission.
-6. **Attribution** — Credit tools, writeups, and teammates. Plagiarism on assignments is treated seriously.
+6. **Attribution** — Credit tools, writeups, and teammates. Do not share live CTF flags or plagiarize writeups.
 
 ---
 
@@ -174,7 +173,7 @@ CyberSecurity_DevClub/
 Each `Week-XX/` folder contains:
 - `README.md` — Overview and learning objectives
 - Topic modules (`.md` files) — Read in order
-- `assignments/` — Optional practice (not graded; CTF flags are)
+- `assignments/` — Optional practice (not scored; CTF flags are)
 
 Weekend CTF challenges live under `../CTFs/week-XX/` (one folder per week), each with challenge READMEs and supporting files.
 
