@@ -129,9 +129,9 @@ No `docker-compose.yml`, no `_infra/` — by design.
 
 ---
 
-## Assignments
+## Assignments (practice — not scored)
 
-Due by Friday before the capstone CTF. These are graded.
+These reinforce Week 5 skills before the capstone CTF. **Only CTF flags are scored** (including writeups only if your coordinators ask for them separately — check Discord).
 
 1. **Privesc lab on Metasploitable 2.** Stand up Metasploitable 2 on host-only networking. From a low-privilege foothold (the `msfadmin` user, or via the vsftpd backdoor), identify and document **two distinct** privilege-escalation paths to root. Each path: enumeration command, exploit command, resulting `id` output, and the technique class from [privilege-escalation.md](privilege-escalation.md). One page total.
 
@@ -139,7 +139,7 @@ Due by Friday before the capstone CTF. These are graded.
 
 3. **Triage script + IR writeup.** Run the `triage.sh` script from [incident-response-lite.md](incident-response-lite.md) against your own Kali / Ubuntu VM. Write a one-page IR-style report on what's *normal* on that host: running services, listening ports, persistence locations, recently-modified files. This is your baseline — defenders can't recognise anomalies without one.
 
-4. **Capstone writeup.** Solve **at least three** of the weekend CTF challenges and write up each using [WRITEUP_TEMPLATE.md](WRITEUP_TEMPLATE.md). Filling the template for one challenge is the mandatory minimum; three is the assignment grade target. The final-boss challenge counts as one of the three if attempted.
+4. **Capstone writeups (recommended).** After the CTF ends, write up **at least three** challenges you solved using [WRITEUP_TEMPLATE.md](WRITEUP_TEMPLATE.md). One writeup is a good minimum; three solidifies learning. The final-boss challenge counts if you attempted it.
 
 ---
 

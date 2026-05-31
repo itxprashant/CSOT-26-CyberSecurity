@@ -327,7 +327,7 @@ Document your analysis like a lab report: file hash, tools, findings, IOCs — e
 - [Ghidra documentation](https://ghidra-sre.org/)
 - [Practical Reverse Engineering](https://nostarch.com/reversing) — Dang et al.
 - [x86-64 Assembly Language Programming with Ubuntu](https://www.egr.unlv.edu/~ed/assembly64.pdf) — free PDF
-- [crackmes.one](https://crackmes.one/) — graded CrackMes
+- [crackmes.one](https://crackmes.one/) — difficulty-rated CrackMes
 - [Microcorruption](https://microcorruption.com/) — assembly puzzle game
 - [LiveOverflow reversing playlist](https://www.youtube.com/c/LiveOverflow) — visual introductions
 

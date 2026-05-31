@@ -124,9 +124,9 @@ If `hashcat` complains about devices in your VM, install `pocl-opencl-icd`. If `
 
 ---
 
-## Assignments
+## Assignments (practice — not scored)
 
-Due by Friday before the CTF. These are graded.
+Use these to practice crypto and forensics workflows before the weekend CTF. **Only CTF flags are scored.**
 
 1. **Crypto write-up.** Pick three of the Week 4 crypto challenges (`caesar-shift`, `encoding-chain`, `vigenere-notes`, `xor-single-byte`, `weak-rsa-mini`) and write a one-page solution per challenge. Include: what you observed, what tool/technique you tried first, what worked, and a `bash`/`python3` snippet that reproduces the solve. Include the recovered flags.
 

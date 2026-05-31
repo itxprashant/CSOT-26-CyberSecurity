@@ -111,9 +111,9 @@ sudo docker compose down
 
 ---
 
-## Assignments
+## Assignments (practice — not scored)
 
-Due by Friday before the CTF. These are graded.
+Work through these before the weekend CTF. **Only CTF flags are scored.**
 
 1. **Recon report on the lab network.** Run your own pipeline (bash, Python, or both — see [recon-automation.md](recon-automation.md)) against `127.0.0.1` while the docker-compose lab is up. Produce a one-page Markdown report listing open ports, services, versions, banners, and any anomalies. Include the script(s) you used.
 

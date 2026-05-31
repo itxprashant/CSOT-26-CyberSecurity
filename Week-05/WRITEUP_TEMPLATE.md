@@ -267,19 +267,17 @@ Padding hurts the writeup. Cut anything that doesn't earn its line. A 1-page wri
 
 ---
 
-## What graders look for
+## What makes a strong writeup
 
-Per the CSOT assignment rubric:
+Use this checklist when documenting CTF solves (for your portfolio or if coordinators request writeups after an event). **Writeups are not separately scored unless announced on Discord** — the CTF platform scores flags only.
 
-| Criterion | Weight |
-|-----------|--------|
-| Reproducible solution (commands runnable as-is) | 30% |
-| Clear explanation of the approach (including dead ends) | 25% |
-| Key insight identified and explained | 20% |
-| Defender-side remediation noted | 15% |
-| Formatting, references, tools section complete | 10% |
-
-The first four are the substance. The fifth is the polish.
+| Criterion | Why it matters |
+|-----------|----------------|
+| Reproducible solution (commands runnable as-is) | Others (and future you) can follow the path |
+| Clear explanation of the approach (including dead ends) | Shows reasoning, not just the answer |
+| Key insight identified and explained | Proves you understood the bug, not just the flag |
+| Defender-side remediation noted | Connects offense to how you'd fix it |
+| Formatting, references, tools section complete | Makes the writeup usable as a reference |
 
 ---
 

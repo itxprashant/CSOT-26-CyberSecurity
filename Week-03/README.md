@@ -123,9 +123,9 @@ sudo docker compose down
 
 ---
 
-## Assignments
+## Assignments (practice — not scored)
 
-Due by Friday before the CTF. These are graded.
+Complete these to reinforce the modules before the weekend CTF. **Only CTF flags are scored.**
 
 1. **Burp environment ready.** Take a screenshot of Burp's HTTP history showing at least 10 requests against `http://127.0.0.1:5000` with the Burp CA installed (no HTTPS cert warnings on your browser when intercepting). Confirm the proxy works for both `curl --proxy http://127.0.0.1:8080` and your browser.
 

@@ -1,17 +1,19 @@
 # Week 1 assignments — bash scripting
 
-Submit scripts via your course portal or as instructed by your coordinators. Each script should be a standalone `.sh` file that can be run directly.
+These are **optional practice** exercises. They are not scored — **only weekend CTF flags count** toward your course standing. Complete them to build scripting habits before the CTF.
+
+Share work with coordinators only if they ask for demos or study groups; there is no assignment submission portal requirement unless announced on Discord.
 
 **General requirements for all assignments:**
 - Include a proper shebang (`#!/bin/bash`) as the first line
 - Make the file executable (`chmod +x script.sh`)
 - Handle missing or invalid arguments gracefully (print usage and exit with code 1)
 - Use meaningful variable names
-- Test on your Kali/WSL environment before submitting
+- Test on your Kali/WSL environment before you consider them done
 
 ---
 
-## Assignment 1: Log finder (30 points)
+## Assignment 1: Log finder
 
 ### Objective
 
@@ -66,20 +68,17 @@ Total lines: 12,847
 - You can store results in an array or a temp file for sorting
 - `sort -rn` sorts numerically in reverse (largest first)
 
-### Grading rubric (30 points)
+### Self-check
 
-| Criteria | Points |
-|----------|--------|
-| Correct shebang and executable | 3 |
-| Argument validation and error messages | 5 |
-| Correctly finds .log files modified in last 7 days | 7 |
-| Accurate line counts (total and per-file) | 7 |
-| Formatted output matching the specification | 5 |
-| Code readability and structure | 3 |
+- [ ] Shebang and executable bit set
+- [ ] Usage and error messages for bad/missing directory
+- [ ] Finds `.log` files modified in the last 7 days
+- [ ] Line counts match manual `wc -l` spot checks
+- [ ] Output format matches the specification
 
 ---
 
-## Assignment 2: System report (35 points)
+## Assignment 2: System report
 
 ### Objective
 
@@ -98,61 +97,13 @@ The script must collect and save the following sections:
 7. **Recent logins** — last 5 login entries (`last | head -5`)
 8. **Footer** — end marker with total generation time
 
-### Output
-
-Save everything to a file named `report_YYYYMMDD_HHMMSS.txt` in the current working directory.
+The output file must be named `sys_report_YYYYMMDD_HHMMSS.txt` in the current directory.
 
 ### Usage
 
 ```bash
 ./sys_report.sh
-# Output: Report saved to: report_20260525_143022.txt
-```
-
-### Expected file format
-
-```
-========================================
- SYSTEM REPORT
- Generated: Mon May 25 14:30:22 IST 2026
- Host: kali
- User: kali
-========================================
-
---- UPTIME ---
- 14:30:22 up 2 days,  3:42,  1 user,  load average: 0.12, 0.08, 0.05
-
---- DISK USAGE ---
-Filesystem      Size  Used Avail Use% Mounted on
-/dev/sda1        40G   12G   26G  32% /
-
---- MEMORY ---
-              total        used        free      shared  buff/cache   available
-Mem:          3.8Gi       1.2Gi       1.4Gi       180Mi       1.2Gi       2.3Gi
-Swap:         2.0Gi          0B       2.0Gi
-
---- PROCESSES ---
-Total running: 142
-
-Top 5 by CPU:
-%CPU  PID  COMMAND
- 2.3  1234 /usr/bin/Xorg
- 1.1  5678 /usr/bin/gnome-shell
- 0.8  9012 /usr/bin/pulseaudio
- 0.5  3456 /usr/bin/python3
- 0.2  7890 /usr/bin/bash
-
---- NETWORK (Listening Ports) ---
-tcp   LISTEN  0.0.0.0:22   users:(("sshd",pid=1234))
-tcp   LISTEN  127.0.0.1:3306   users:(("mysqld",pid=5678))
-
---- RECENT LOGINS ---
-kali     pts/0    Mon May 25 14:28   still logged in
-kali     pts/0    Mon May 25 10:15 - 12:30
-
-========================================
- Report generation time: 0.34 seconds
-========================================
+# Creates: sys_report_20260525_143022.txt
 ```
 
 ### Error handling
@@ -168,21 +119,16 @@ kali     pts/0    Mon May 25 10:15 - 12:30
 - Wrap section commands in functions for cleaner code
 - `command -v <cmd>` checks if a command exists
 
-### Grading rubric (35 points)
+### Self-check
 
-| Criteria | Points |
-|----------|--------|
-| Correct shebang and executable | 3 |
-| Timestamped filename generated correctly | 4 |
-| All 7 sections present with correct data | 14 (2 per section) |
-| Error handling for missing commands | 4 |
-| Formatted output (headers, separators, readable) | 5 |
-| Measures and reports generation time | 3 |
-| Code organization (functions, readability) | 2 |
+- [ ] Timestamped filename generated correctly
+- [ ] All sections present with sensible data
+- [ ] Graceful handling when optional commands are missing
+- [ ] Readable headers and footer with generation time
 
 ---
 
-## Assignment 3: Password generator (35 points)
+## Assignment 3: Password generator
 
 ### Objective
 
@@ -262,26 +208,18 @@ openssl rand -base64 "$length" | tr -dc 'A-Za-z0-9!@#$%^&*' | head -c "$length"
 - Use a regex to validate numeric input: `[[ "$var" =~ ^[0-9]+$ ]]`
 - The `date` command with format string creates timestamps: `date '+%Y-%m-%d %H:%M:%S'`
 
-### Grading rubric (35 points)
+### Self-check
 
-| Criteria | Points |
-|----------|--------|
-| Correct shebang and executable | 3 |
-| Default values work when no args provided | 4 |
-| Validates length range (8–128) | 4 |
-| Validates count range (1–100) | 3 |
-| Handles non-numeric input gracefully | 3 |
-| Generated passwords contain all character classes | 5 |
-| Passwords are different on each run (random) | 3 |
-| Correct stdout formatting | 3 |
-| Correctly appends to passwords.log with timestamp | 4 |
-| Code structure and readability | 3 |
+- [ ] Defaults work with no arguments
+- [ ] Length and count validation enforced
+- [ ] Passwords use all character classes and differ each run
+- [ ] `passwords.log` appends with timestamps
 
 ---
 
-## Submission checklist
+## Completion checklist
 
-Before submitting, verify:
+Before the weekend CTF, verify:
 
 - [ ] All three scripts have `#!/bin/bash` as line 1
 - [ ] All three scripts are executable (`chmod +x`)
@@ -300,3 +238,7 @@ Before submitting, verify:
 3. **Use ShellCheck** — paste your script at shellcheck.net to catch common bugs
 4. **Read error messages** — bash errors tell you the line number and what went wrong
 5. **Use `set -x`** — run `bash -x script.sh` to see exactly what bash is executing
+
+---
+
+**Scoring reminder:** Weekend CTF flags (`csot26{...}`) are the only scored component for Week 1. These scripts prepare you for scripting-themed CTF challenges.
