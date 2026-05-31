@@ -72,13 +72,13 @@ These reinforce what you read in the modules. Do them on Wed–Thu.
 
 ---
 
-## Assignments
+## Assignments (practice only — not graded)
 
-Due by Friday before the CTF. These are graded.
+Recommended before the weekend CTF for skill-building. **Your score comes from CTF flags only.**
 
 1. **Scavenger hunt** — Extract the [scavenger_hunt.tar.xz](../../CTFs/week-01/scavenger_hunt.tar.xz) archive and follow the trail of clues across nested directories. Requires: `tar`, `find`, `grep`, `cat`, reading hidden files.
 
-2. **Bash scripts** — Three scripting tasks of increasing complexity. See [assignments/README.md](assignments/README.md) for full specifications, examples, and rubric.
+2. **Bash scripts** — Three scripting tasks of increasing complexity. See [assignments/README.md](assignments/README.md) for full specifications, examples, and self-check lists.
 
 3. **Account setup** — Create accounts on all four platforms below and bookmark three upcoming CTFs from CTFtime:
    - [Hack The Box](https://www.hackthebox.com/)

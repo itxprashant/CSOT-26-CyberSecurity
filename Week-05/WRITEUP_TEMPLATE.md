@@ -7,7 +7,7 @@ A good writeup is not a transcript. It's the story of how you solved a challenge
 1. Copy this template into your CTF folder (e.g. `writeups/forensics-log.md`).
 2. Fill in each section as you solve.
 3. Keep notes *as you work*, not after the fact. Stale memory invents wrong details.
-4. Submit the filled writeup for the CTF assignment.
+4. After the CTF ends, keep the filled writeup in your notes or portfolio (optional — not graded).
 
 The bottom half of this file is a **worked example** so you can see the template applied. Use it as a reference for tone and depth.
 
@@ -267,19 +267,19 @@ Padding hurts the writeup. Cut anything that doesn't earn its line. A 1-page wri
 
 ---
 
-## What graders look for
+## What makes a strong writeup
 
-Per the CSOT assignment rubric:
+Writeups are **not graded** — they are for your own learning and portfolio. Use this checklist when polishing a post-CTF writeup:
 
-| Criterion | Weight |
+| Criterion | Focus |
 |-----------|--------|
-| Reproducible solution (commands runnable as-is) | 30% |
-| Clear explanation of the approach (including dead ends) | 25% |
-| Key insight identified and explained | 20% |
-| Defender-side remediation noted | 15% |
-| Formatting, references, tools section complete | 10% |
+| Reproducible solution (commands runnable as-is) | Highest |
+| Clear explanation of the approach (including dead ends) | High |
+| Key insight identified and explained | High |
+| Defender-side remediation noted | Medium |
+| Formatting, references, tools section complete | Polish |
 
-The first four are the substance. The fifth is the polish.
+The first four are the substance. The fifth is optional polish.
 
 ---
 

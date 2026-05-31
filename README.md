@@ -21,12 +21,13 @@ Software engineers who understand security build better systems. Whether you end
 
 | | |
 |---|---|
-| **Format** | Weekly reading modules → external platform practice → assignments → weekend CTF |
+| **Format** | Weekly reading modules → external platform practice → optional assignments → weekend CTF |
+| **Grading** | Weekend CTF flags only (assignments are practice, not submitted for marks) |
 | **Duration** | 5 weeks (Mon–Sun cycles) |
 | **Prerequisites** | Basic programming in any language; curiosity about how systems work |
 | **Flag format** | `csot26{...}` (all CTF flags follow this format) |
 | **Communication** | Course Discord server (link shared by coordinators) |
-| **Submission** | Flags submitted via CTF platform; assignments via course portal |
+| **Submission** | Flags submitted via the CTF platform only |
 
 **Resources:** [RESOURCES.md](RESOURCES.md) — curated links organized by week and difficulty level
 
@@ -48,12 +49,12 @@ Software engineers who understand security build better systems. Whether you end
 |------|----------|---------|
 | Mon–Tue | **Study** | Read that week's modules in order; complete any setup tasks; take notes on new concepts |
 | Wed–Thu | **External practice** | Work through guided labs on TryHackMe, PortSwigger Academy, picoCTF Gym, or OverTheWire |
-| Fri | **Assignments & prep** | Complete weekly assignments; review hints for upcoming CTF; form teams if needed |
+| Fri | **Practice & prep** | Optional weekly assignments for skill-building; review hints for upcoming CTF; form teams if needed |
 | Sat–Sun | **Weekend CTF** | 2–3 hour jeopardy-style competition (8 challenges per week; teams allowed in Week 5) |
 
 ### Time commitment
 
-Expect **6–10 hours per week**: ~2 hours reading modules, ~2–3 hours on external platforms, ~1–2 hours on assignments, and ~2–3 hours on the weekend CTF. You can go deeper — the resources document has advanced material for every topic.
+Expect **6–10 hours per week**: ~2 hours reading modules, ~2–3 hours on external platforms, ~1–2 hours on optional practice assignments (recommended but not graded), and ~2–3 hours on the weekend CTF (your score for the week). You can go deeper — the resources document has advanced material for every topic.
 
 ---
 
@@ -173,7 +174,7 @@ CyberSecurity_DevClub/
 Each `Week-XX/` folder contains:
 - `README.md` — Overview and learning objectives
 - Topic modules (`.md` files) — Read in order
-- `assignments/` — Graded work
+- `assignments/` — Optional practice (not graded; CTF flags are)
 
 Weekend CTF challenges live under `../CTFs/week-XX/` (one folder per week), each with challenge READMEs and supporting files.
 

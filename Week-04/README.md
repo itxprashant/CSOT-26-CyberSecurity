@@ -124,9 +124,9 @@ If `hashcat` complains about devices in your VM, install `pocl-opencl-icd`. If `
 
 ---
 
-## Assignments
+## Assignments (practice only — not graded)
 
-Due by Friday before the CTF. These are graded.
+Recommended before the weekend CTF for skill-building. **Your score comes from CTF flags only.**
 
 1. **Crypto write-up.** Pick three of the Week 4 crypto challenges (`caesar-shift`, `encoding-chain`, `vigenere-notes`, `xor-single-byte`, `weak-rsa-mini`) and write a one-page solution per challenge. Include: what you observed, what tool/technique you tried first, what worked, and a `bash`/`python3` snippet that reproduces the solve. Include the recovered flags.
 
@@ -134,7 +134,7 @@ Due by Friday before the CTF. These are graded.
 
 3. **Forensics report on the lab artifacts.** Pick at least three of the Week 4 forensics/stego challenges (`hidden-png`, `metadata-leak`, `carved-note`, `pcap-cleartext`, `hash-identify`) and produce a single Markdown report walking through your analysis. Use the disciplined workflow from [digital-forensics.md](digital-forensics.md): `file` → metadata → strings → carving → specialised tool. Document each step.
 
-4. **Self secret-scan.** Run `trufflehog --only-verified` on every public repo under your GitHub username and submit a short note saying either "nothing found" or "found and rotated, here's what I did." Also install `pre-commit` with the `gitleaks` hook on your CSOT working repo so you can't accidentally commit secrets going forward.
+4. **Self secret-scan.** Run `trufflehog --only-verified` on every public repo under your GitHub username and note whether you found anything (and rotated if so). Also install `pre-commit` with the `gitleaks` hook on your CSOT working repo so you can't accidentally commit secrets going forward.
 
 ---
 

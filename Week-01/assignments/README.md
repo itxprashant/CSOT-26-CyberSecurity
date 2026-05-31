@@ -1,17 +1,19 @@
 # Week 1 assignments — bash scripting
 
-Submit scripts via your course portal or as instructed by your coordinators. Each script should be a standalone `.sh` file that can be run directly.
+**Not graded.** These exercises build the scripting skills you need for the Week 1 weekend CTF. Your course score comes from **CTF flags only** — complete these for practice, not for submission marks.
+
+Each script should be a standalone `.sh` file that can be run directly on your Kali/WSL environment.
 
 **General requirements for all assignments:**
 - Include a proper shebang (`#!/bin/bash`) as the first line
 - Make the file executable (`chmod +x script.sh`)
 - Handle missing or invalid arguments gracefully (print usage and exit with code 1)
 - Use meaningful variable names
-- Test on your Kali/WSL environment before submitting
+- Test on your Kali/WSL environment before the weekend CTF
 
 ---
 
-## Assignment 1: Log finder (30 points)
+## Assignment 1: Log finder
 
 ### Objective
 
@@ -66,20 +68,18 @@ Total lines: 12,847
 - You can store results in an array or a temp file for sorting
 - `sort -rn` sorts numerically in reverse (largest first)
 
-### Grading rubric (30 points)
+### Self-check (before the CTF)
 
-| Criteria | Points |
-|----------|--------|
-| Correct shebang and executable | 3 |
-| Argument validation and error messages | 5 |
-| Correctly finds .log files modified in last 7 days | 7 |
-| Accurate line counts (total and per-file) | 7 |
-| Formatted output matching the specification | 5 |
-| Code readability and structure | 3 |
+- [ ] Correct shebang and executable
+- [ ] Argument validation and error messages
+- [ ] Correctly finds `.log` files modified in the last 7 days
+- [ ] Accurate line counts (total and per-file)
+- [ ] Formatted output matching the specification
+- [ ] Code readability and structure
 
 ---
 
-## Assignment 2: System report (35 points)
+## Assignment 2: System report
 
 ### Objective
 
@@ -168,21 +168,19 @@ kali     pts/0    Mon May 25 10:15 - 12:30
 - Wrap section commands in functions for cleaner code
 - `command -v <cmd>` checks if a command exists
 
-### Grading rubric (35 points)
+### Self-check (before the CTF)
 
-| Criteria | Points |
-|----------|--------|
-| Correct shebang and executable | 3 |
-| Timestamped filename generated correctly | 4 |
-| All 7 sections present with correct data | 14 (2 per section) |
-| Error handling for missing commands | 4 |
-| Formatted output (headers, separators, readable) | 5 |
-| Measures and reports generation time | 3 |
-| Code organization (functions, readability) | 2 |
+- [ ] Correct shebang and executable
+- [ ] Timestamped filename generated correctly
+- [ ] All 7 sections present with correct data
+- [ ] Error handling for missing commands
+- [ ] Formatted output (headers, separators, readable)
+- [ ] Measures and reports generation time
+- [ ] Code organization (functions, readability)
 
 ---
 
-## Assignment 3: Password generator (35 points)
+## Assignment 3: Password generator
 
 ### Objective
 
@@ -262,26 +260,22 @@ openssl rand -base64 "$length" | tr -dc 'A-Za-z0-9!@#$%^&*' | head -c "$length"
 - Use a regex to validate numeric input: `[[ "$var" =~ ^[0-9]+$ ]]`
 - The `date` command with format string creates timestamps: `date '+%Y-%m-%d %H:%M:%S'`
 
-### Grading rubric (35 points)
+### Self-check (before the CTF)
 
-| Criteria | Points |
-|----------|--------|
-| Correct shebang and executable | 3 |
-| Default values work when no args provided | 4 |
-| Validates length range (8–128) | 4 |
-| Validates count range (1–100) | 3 |
-| Handles non-numeric input gracefully | 3 |
-| Generated passwords contain all character classes | 5 |
-| Passwords are different on each run (random) | 3 |
-| Correct stdout formatting | 3 |
-| Correctly appends to passwords.log with timestamp | 4 |
-| Code structure and readability | 3 |
+- [ ] Correct shebang and executable
+- [ ] Default values work when no args provided
+- [ ] Validates length range (8–128) and count range (1–100)
+- [ ] Handles non-numeric input gracefully
+- [ ] Generated passwords contain all character classes and differ each run
+- [ ] Correct stdout formatting
+- [ ] Correctly appends to `passwords.log` with timestamp
+- [ ] Code structure and readability
 
 ---
 
-## Submission checklist
+## Practice checklist
 
-Before submitting, verify:
+Before the weekend CTF, verify:
 
 - [ ] All three scripts have `#!/bin/bash` as line 1
 - [ ] All three scripts are executable (`chmod +x`)
