@@ -142,6 +142,41 @@ Due by Friday before the CTF. These are graded.
 
 ---
 
+## Advanced Reading
+
+For those who want to go deeper this week:
+
+### Books
+
+- *The Linux Command Line* — William Shotts — [linuxcommand.org](https://linuxcommand.org/tlcl.php) (free PDF)
+- *Linux Basics for Hackers* — OccupyTheWeb — Kali-focused practical skills
+
+### Online courses / paths
+
+- [TryHackMe — Complete Beginner](https://tryhackme.com/path/outline/presecurity) — structured onboarding
+- [HackTheBox — Starting Point](https://www.hackthebox.com/) — guided machines after invite challenge
+- [W3Schools Cybersecurity](https://www.w3schools.com/cybersecurity/) — concise concept overviews
+
+### Tools to explore
+
+- [tmux](https://github.com/tmux/tmux/wiki) — terminal multiplexer for CTF sessions
+- [ExplainShell](https://explainshell.com/) — decode complex one-liners
+- [CyberChef](https://gchq.github.io/CyberChef/) — encodings preview for later weeks
+
+### Challenge platforms
+
+- [OverTheWire Bandit](https://overthewire.org/wargames/bandit/) — levels 16–34 after finishing 0–15
+- [cmdchallenge](https://cmdchallenge.com/) — quick CLI puzzles
+- [picoCTF Gym — General Skills](https://play.picoctf.org/practice)
+
+### Videos / creators
+
+- [NetworkChuck](https://www.youtube.com/c/NetworkChuck) — Linux and cybersecurity fundamentals
+- [John Hammond](https://www.youtube.com/c/JohnHammond010) — beginner CTF walkthroughs
+- [IppSec](https://www.youtube.com/c/ippsec) — HackTheBox machines (attempt first, then watch)
+
+---
+
 ## What's next
 
 Week 2 takes the reconnaissance commands you learned here and applies them to real-world information gathering — DNS enumeration, network scanning with nmap, and open-source intelligence (OSINT). The bash skills you built will be used to automate recon tasks.

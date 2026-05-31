@@ -2,7 +2,7 @@
 
 Welcome to the **Cybersecurity** track of CSOT 2026, led by **DevClub IIT Delhi**.
 
-This is a five-week, hands-on introduction to practical security — covering everything from how attackers think to how defenders respond. You will learn OSINT, web application testing, cryptography, digital forensics, Linux fundamentals, and scripting — all tied together with **weekend CTF competitions** that test what you learned each week.
+This is a five-week, hands-on introduction to practical security — covering everything from how attackers think to how defenders respond. You will learn OSINT, web application testing, cryptography, digital forensics, Linux fundamentals, scripting, reverse engineering, and introductory binary exploitation — all tied together with **weekend CTF competitions** that test what you learned each week.
 
 ---
 
@@ -40,7 +40,7 @@ Software engineers who understand security build better systems. Whether you end
 | 2 | OSINT & open-source investigation | Google dorking, DNS enumeration, WHOIS, network scanning with nmap, building intelligence from public data | [Week-02/](Week-02/) |
 | 3 | Web application security | HTTP internals, OWASP Top 10 vulnerabilities, Burp Suite interception, SQL injection, XSS, API and JWT attacks | [Week-03/](Week-03/) |
 | 4 | Cryptography, steganography & forensics | Classical and modern ciphers, hash cracking, hidden data in files, log analysis, PCAP inspection | [Week-04/](Week-04/) |
-| 5 | Systems security & capstone CTF | Privilege escalation, post-exploitation, Python automation, team-based multi-category CTF, writeup documentation | [Week-05/](Week-05/) |
+| 5 | Systems security, RE, PWN & capstone CTF | Privilege escalation, reverse engineering, binary exploitation intro, post-exploitation, IR, team capstone CTF | [Week-05/](Week-05/) |
 
 ### Weekly rhythm
 
@@ -105,13 +105,13 @@ Cryptography protects data — and when it's implemented poorly, attackers explo
 
 ---
 
-## Week 5 — Systems security & capstone
+## Week 5 — Systems security, reverse engineering, binary exploitation & capstone
 
-**Goal:** Tie everything together with privilege escalation, automation, and a team-based capstone CTF.
+**Goal:** Tie everything together with privilege escalation, native-code skills (RE and pwn), automation, defensive IR, and a team-based capstone CTF.
 
-This week covers what happens after initial access — escalating privileges, maintaining persistence, covering tracks, and how defenders detect these actions. You'll also automate common tasks with Python and participate in a team capstone CTF that draws from all 5 weeks.
+This week covers what happens after initial access — escalating privileges, reversing binaries, introductory stack exploitation, post-exploitation, and how defenders detect these actions. You'll automate common tasks with Python and participate in a team capstone CTF that draws from all 5 weeks.
 
-**Key topics:** Linux privilege escalation (SUID, cron, sudo misconfigs), post-exploitation, Python scripting for pentesting, Metasploit basics, cloud metadata awareness, team CTF strategy, writeup documentation.
+**Key topics:** Linux privilege escalation (SUID, cron, sudo misconfigs), Ghidra and static RE, buffer overflows and pwntools, post-exploitation, Python scripting for pentesting, Metasploit basics, cloud metadata awareness, incident response lite, team CTF strategy, writeup documentation.
 
 → [Week-05/README.md](Week-05/README.md) · [Writeup template](Week-05/WRITEUP_TEMPLATE.md)
 

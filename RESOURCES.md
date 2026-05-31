@@ -18,6 +18,7 @@ Links from course bookmarks and community lists, tagged by **level** and **week*
 | [roadmap.sh — Ethical Hacking](https://roadmap.sh/r/ethical-hacking-yyvh9) | I | 1+ |
 | [dev.to — Cybersecurity roadmap](https://dev.to/alvinseyidov/cybersecurity-roadmap-for-myself-and-anyone-starting-fresh-755) | B | 1 |
 | [GeeksforGeeks — What are CTFs?](https://www.geeksforgeeks.org/ethical-hacking/what-is-ctfs-capture-the-flag/) | B | 1 |
+| [W3Schools — Cybersecurity](https://www.w3schools.com/cybersecurity/) | B | 1 |
 | [TryHackMe — CTF deep dive](https://tryhackme.com/resources/blog/ctf-deep-dive-how-to-choose-the-right-category-for-your-skill-level) | B | 1 |
 | [Snyk — CTF types](https://snyk.io/articles/ctf/ctf-types/) | B | 1 |
 | [CTF Wiki](https://ctf-wiki.org/en/) | B–A | All |
@@ -127,20 +128,26 @@ Links from course bookmarks and community lists, tagged by **level** and **week*
 
 ---
 
-## Week 5 — Exploitation & advanced
+## Week 5 — Exploitation, privesc, IR, PWN & RE
 
 | Resource | Level |
 |----------|-------|
 | [GTFOBins](https://gtfobins.github.io/) | B–I |
 | [LOLBAS](https://lolbas-project.github.io/) | I |
 | [Metasploit](https://www.metasploit.com/) | I |
+| [Ghidra](https://ghidra-sre.org/) | B–I |
+| [pwntools documentation](https://docs.pwntools.com/) | I |
+| [pwnable.kr](http://pwnable.kr/) | B–I |
+| [pwn.college](https://pwn.college/) | B–I |
+| [crackmes.one](https://crackmes.one/) | B–I |
+| [TryHackMe — Buffer Overflow Prep](https://tryhackme.com/) | B–I |
+| [reversing.kr](http://reversing.kr/) | I |
+| [ROP Emporium](https://ropemporium.com/) | I–A |
+| [nightmare (guyinatuxedo)](https://guyinatuxedo.github.io/) | I–A |
 | [SmashTheStack](http://www.smashthestack.org/) | A |
-| [pwnable.kr](http://pwnable.kr/) | A |
 | [pwnable.tw](https://pwnable.tw/) | A |
-| [ROP Emporium](https://ropemporium.com/) | A |
 | [how2heap](https://github.com/shellphish/how2heap) | A |
-| [reversing.kr](http://reversing.kr/) | A |
-| [Microcorruption](https://microcorruption.com/login) | A |
+| [Microcorruption](https://microcorruption.com/login) | I–A |
 | [LiveOverflow](https://liveoverflow.com/) | I–A |
 | [CSE IITB writeups](https://cseciitb.github.io/) | I |
 

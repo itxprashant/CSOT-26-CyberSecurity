@@ -15,9 +15,9 @@ Week 1           Week 2            Week 3             Week 4              Week 5
 Linux/Safety     OSINT/Recon       Web Security       Crypto/DFIR         Systems + Capstone
     │                │                  │                  │                   │
     ▼                ▼                  ▼                  ▼                   ▼
- Misc/General     OSINT            Web               Crypto              Pwn (intro)
- Linux skills     Recon            Web               Forensics           Misc (advanced)
- Scripting        Networking       API hacking       Steganography       All categories
+ Misc/General     OSINT            Web               Crypto              Pwn + RE (intro)
+ Linux skills     Recon            Web               Forensics           Privesc / IR
+ Scripting        Networking       API hacking       Steganography       Capstone (all)
 ```
 
 **Why this order?**
@@ -25,7 +25,7 @@ Linux/Safety     OSINT/Recon       Web Security       Crypto/DFIR         System
 2. **Week 2 (OSINT/Recon)** — Reconnaissance comes before exploitation in any real engagement
 3. **Week 3 (Web)** — Web is the most common category and the largest attack surface in modern software
 4. **Week 4 (Crypto/Forensics)** — Requires comfortable scripting and understanding of data formats
-5. **Week 5 (Systems)** — Ties everything together; assumes you can script, understand networks, and exploit web apps
+5. **Week 5 (Systems + RE + Pwn)** — Privilege escalation, reverse engineering basics, stack overflow intro, IR, and capstone across all categories
 
 ---
 
@@ -38,13 +38,13 @@ Linux/Safety     OSINT/Recon       Web Security       Crypto/DFIR         System
 | **Web** | 3 | Yes (for basics) | HTTP knowledge, HTML/JS awareness | Burp Suite, browser DevTools, curl |
 | **Crypto** | 4 | Easy challenges yes; hard ones require math | Number theory for RSA; programming for automation | CyberChef, Python, hashcat, SageMath |
 | **Forensics / Stego** | 4 | Yes for file analysis; harder for memory forensics | File format knowledge, networking basics | Wireshark, binwalk, strings, Autopsy |
-| **Reversing** | Post-course | No | Assembly language, C programming | Ghidra, IDA, gdb, radare2 |
-| **Pwn** | Post-course | No | C, assembly, OS internals, exploit dev concepts | gdb, pwntools, checksec, ROPgadget |
+| **Reversing** | 5 (intro) | Moderate | Week 1 Linux + basic programming | Ghidra, strings, gdb |
+| **Pwn** | 5 (intro) | Moderate | C basics, stack layout from Week 5 module | gdb, pwntools, checksec |
 
 ### Interpreting this table
 
 - **"Very beginner-friendly"** means you can start solving challenges with just the module content
-- **"Post-course"** categories require significant self-study beyond CSOT; see [RESOURCES.md](../RESOURCES.md)
+- **Reversing and Pwn** get a structured introduction in Week 5; ROP, heap, and advanced RE are post-course depth — see [RESOURCES.md](../RESOURCES.md)
 - Most CTFs weight web and crypto heavily, so Weeks 3 and 4 prepare you for the majority of real competition challenges
 
 ---
@@ -91,7 +91,7 @@ On [CTFtime](https://ctftime.org/), look for:
 | Completing Week 2 | TryHackMe OSINT rooms, Geoguessr, OSINT Dojo |
 | Completing Week 3 | PortSwigger Academy labs, TryHackMe web rooms, OWASP WebGoat |
 | Completing Week 4 | CryptoHack, picoCTF (Crypto + Forensics categories) |
-| Completing Week 5 | Any beginner jeopardy CTF; team up for 24–48h events |
+| Completing Week 5 | pwnable.kr toddler, picoCTF pwn/reversing, any beginner jeopardy CTF |
 
 ### Step 3: Start with always-available platforms
 
@@ -144,11 +144,18 @@ TryHackMe DFIR rooms → Autopsy/Volatility practice
 → SANS DFIR challenges → real incident response work
 ```
 
-### Binary/Pwn specialist path (advanced)
+### Binary/Pwn specialist path
 
 ```
-pwnable.kr → ROP Emporium → Nightmare (binary exploitation course)
-→ Hack The Box pwn challenges → advanced CTF teams
+Week 5 binary-exploitation-intro → pwnable.kr → ROP Emporium
+→ pwn.college → Hack The Box pwn → advanced CTF teams
+```
+
+### Reverse engineering specialist path
+
+```
+Week 5 reverse-engineering-basics → crackmes.one → reversing.kr
+→ Microcorruption → advanced RE challenges
 ```
 
 ### OSINT specialist path
@@ -180,7 +187,8 @@ For when you've completed CSOT and want to go further:
 
 | Resource | Category | Difficulty |
 |----------|----------|------------|
-| [pwnable.kr](http://pwnable.kr/) | Binary exploitation | Hard |
+| [pwnable.kr](http://pwnable.kr/) | Binary exploitation (start after Week 5) | Medium–Hard |
+| [pwn.college](https://pwn.college/) | Full pwn curriculum | Medium–Hard |
 | [ROP Emporium](https://ropemporium.com/) | Return-oriented programming | Hard |
 | [SmashTheStack](http://www.smashthestack.org/) | Wargames (exploit dev) | Hard |
 | [Nightmare](https://guyinatuxedo.github.io/) | Binary exploitation course | Hard |

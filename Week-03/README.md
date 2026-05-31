@@ -204,6 +204,46 @@ Due by Friday before the CTF. These are graded.
 
 ---
 
+## Advanced Reading
+
+For those who want to go deeper this week:
+
+### Books
+
+- *The Web Application Hacker's Handbook* — Stuttard & Pinto — classic web security reference
+- *Bug Bounty Bootcamp* — Vickie Li — practical web finding and reporting
+- *Real-World Bug Hunting* — Peter Yaworski — case studies from HackerOne
+
+### Online courses / paths
+
+- [PortSwigger Web Security Academy](https://portswigger.net/web-security) — complete all Apprentice and Practitioner labs
+- [HackTheBox Academy — Bug Bounty Hunter](https://academy.hackthebox.com/)
+- [OWASP Web Security Testing Guide](https://owasp.org/www-project-web-security-testing-guide/)
+
+### Tools to explore
+
+- [ffuf](https://github.com/ffuf/ffuf) · [nuclei](https://github.com/projectdiscovery/nuclei) — fast fuzzing and templated scanning
+- [Caido](https://caido.io/) · [mitmproxy](https://mitmproxy.org/) — alternative intercept proxies
+- [sqlmap](https://sqlmap.org/) — automated SQLi (authorized targets only)
+
+### Challenge platforms
+
+- [Google Gruyere](https://google-gruyere.appspot.com/)
+- [OWASP Juice Shop](https://owasp.org/www-project-juice-shop/)
+- [HackTheBox — Web category](https://www.hackthebox.com/) easy machines
+
+### Videos / creators
+
+- [STÖK](https://www.youtube.com/c/STOKfredrik) — bug bounty methodology
+- [PwnFunction](https://www.youtube.com/c/PwnFunction) — animated web vuln explanations
+
+### Certifications (optional)
+
+- **PortSwigger certifications** (BSCP path) — web-focused, hands-on
+- **eWPT** — web penetration testing entry credential
+
+---
+
 ## What's next
 
 Week 4 takes the **trust questions** that JWTs raised — "what does it mean for something to be signed?" — and goes deep on the mathematics underneath. You'll cover hashing, symmetric/asymmetric encryption, real-world weak crypto patterns, and then forensics: recovering data and reconstructing timelines after an incident has already happened.

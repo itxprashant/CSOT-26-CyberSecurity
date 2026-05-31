@@ -192,6 +192,41 @@ Due by Friday before the CTF. These are graded.
 
 ---
 
+## Advanced Reading
+
+For those who want to go deeper this week:
+
+### Books
+
+- *Open Source Intelligence Techniques* — Michael Bazzell — professional OSINT methodology
+- *Nmap Network Scanning* — Gordon Lyon — definitive guide to nmap
+
+### Online courses / paths
+
+- [TryHackMe — OSINT](https://tryhackme.com/) — OhSINT, Searchlight, WebOSINT rooms
+- [SANS SEC487](https://www.sans.org/cyber-security-courses/open-source-intelligence-gathering/) — OSINT certification track (overview)
+- [Bellingcat](https://www.bellingcat.com/) — published investigations as case studies
+
+### Tools to explore
+
+- [Maltego](https://www.maltego.com/) — link analysis (community edition)
+- [theHarvester](https://github.com/laramies/theHarvester) — email and subdomain harvesting
+- [SpiderFoot](https://www.spiderfoot.net/) — automated OSINT orchestration
+- [Recon-ng](https://github.com/lanmaster53/recon-ng) — modular recon framework
+
+### Challenge platforms
+
+- [Trace Labs](https://www.tracelabs.org/) — OSINT-for-good CTF events
+- [HackTheBox — Starting Point](https://www.hackthebox.com/) — every box begins with nmap
+- [contactrika OSINT puzzles](https://contactrika.github.io/)
+
+### Videos / creators
+
+- [The Cyber Mentor](https://www.youtube.com/c/TheCyberMentor) — recon and enumeration walkthroughs
+- [NahamSec](https://www.youtube.com/c/Nahamsec) — recon for bug bounty
+
+---
+
 ## What's next
 
 Week 3 takes the **port 80 / 443** entries from your scan reports and turns them into actual web-application attack surface. You'll fuzz directories, discover endpoints, and exploit OWASP Top-10 classes like SQL injection, XSS, IDOR, and command injection. The subdomain and recon-automation work from this week directly feeds Week 3's target lists.
