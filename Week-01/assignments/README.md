@@ -2,7 +2,7 @@
 
 These are **optional practice** exercises. They are not scored — **only weekend CTF flags count** toward your course standing. Complete them to build scripting habits before the CTF.
 
-Share work with coordinators only if they ask for demos or study groups; there is no assignment submission portal requirement unless announced on Discord.
+Share work with coordinators only if they ask for demos or study groups; there is no assignment submission portal requirement unless announced in the [course WhatsApp group](https://chat.whatsapp.com/BJN7duZuObq1gbGPrped0y).
 
 **General requirements for all assignments:**
 - Include a proper shebang (`#!/bin/bash`) as the first line

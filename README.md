@@ -4,6 +4,9 @@ Welcome to the **Cybersecurity** track of CSOT 2026, led by **DevClub IIT Delhi*
 
 This is a five-week, hands-on introduction to practical security — covering everything from how attackers think to how defenders respond. You will learn OSINT, web application testing, cryptography, digital forensics, Linux fundamentals, scripting, reverse engineering, and introductory binary exploitation — all tied together with **weekend CTF competitions** that test what you learned each week.
 
+**Register:** [csot.devclub.in/tracks/cybersec/register](https://csot.devclub.in/tracks/cybersec/register) (sign in with your IIT Delhi account)  
+**Community:** [CSOT DevClub Cybersecurity WhatsApp group](https://chat.whatsapp.com/BJN7duZuObq1gbGPrped0y)
+
 ---
 
 ## Why this course?
@@ -25,7 +28,8 @@ Software engineers who understand security build better systems. Whether you end
 | **Duration** | 5 weeks (Mon–Sun cycles) |
 | **Prerequisites** | Basic programming in any language; curiosity about how systems work |
 | **Flag format** | `csot26{...}` (all CTF flags follow this format) |
-| **Communication** | Course Discord server (link shared by coordinators) |
+| **Registration** | [Cybersec track registration](https://csot.devclub.in/tracks/cybersec/register) (IIT Delhi account) |
+| **Communication** | [Course WhatsApp group](https://chat.whatsapp.com/BJN7duZuObq1gbGPrped0y) — logistics, questions, CTF hints |
 | **Submission** | CTF flags submitted via the course CTF platform (assignments are practice only, not scored) |
 
 **Resources:** [RESOURCES.md](RESOURCES.md) — curated links organized by week and difficulty level
@@ -134,13 +138,12 @@ These rules are non-negotiable. Violating them can result in removal from the co
 
 | Channel | Use for |
 |---------|---------|
-| Course Discord `#general` | Logistics, schedule, announcements |
-| Course Discord `#week-N` | Module questions, lab issues |
-| Course Discord `#ctf-hints` | Nudges during the weekend CTF (no spoilers) |
-| Coordinators (DM) | Personal issues, extensions, ethics questions |
-| Office hours | Live help with setup or challenging concepts |
+| [Course WhatsApp group](https://chat.whatsapp.com/BJN7duZuObq1gbGPrped0y) | Logistics, schedule, announcements, module questions, lab issues |
+| WhatsApp (CTF weekends) | Nudges during the weekend CTF — coordinators will share hint policy in the group (no spoilers) |
+| Coordinators (DM on WhatsApp) | Personal issues, extensions, ethics questions |
+| Office hours | Live help with setup or challenging concepts (times announced in the group) |
 
-**Stuck on a challenge?** Before asking for help: (1) re-read the challenge description carefully, (2) Google the error message or technique name, (3) check if a hint is available. If still stuck after 30–45 minutes, ask in the appropriate channel.
+**Stuck on a challenge?** Before asking for help: (1) re-read the challenge description carefully, (2) Google the error message or technique name, (3) check if a hint is available. If still stuck after 30–45 minutes, ask in the WhatsApp group.
 
 ---
 

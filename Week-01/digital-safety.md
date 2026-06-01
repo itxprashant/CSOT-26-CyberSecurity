@@ -78,7 +78,7 @@ During CTF research you'll encounter unknown tools, sites, and links. Before vis
 |-------|-----|
 | WHOIS/registrar | `whois domain.com` — when was it registered? By whom? |
 | DNS records | `dig domain.com` — does it resolve to expected infrastructure? |
-| Official source | Did you get the link from the course Discord or official repo? Or from an unsolicited email? |
+| Official source | Did you get the link from the [course WhatsApp group](https://chat.whatsapp.com/BJN7duZuObq1gbGPrped0y) or this repository? Or from an unsolicited email? |
 | Search engine | Google `"domain.com" scam` or `"domain.com" review` |
 | Browser extension | [ScamAdviser Chrome Extension](https://chromewebstore.google.com/detail/scamadviser/lcmofkcgjjagmhodenahpocfkpopjdci) for passive checks |
 
@@ -241,7 +241,7 @@ Enable MFA on: GitHub, Google, IIT SSO, any service storing sensitive data.
 
 ### Verifying course materials
 
-- Confirm CTF links come from the official course Discord or this repository
+- Confirm CTF links come from the [official course WhatsApp group](https://chat.whatsapp.com/BJN7duZuObq1gbGPrped0y) or this repository
 - Don't submit flags to unknown "checkers" or paste challenge URLs into untrusted sites
 - If a "classmate" DMs you a tool link, verify through official channels first
 

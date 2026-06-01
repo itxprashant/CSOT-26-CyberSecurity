@@ -2,6 +2,15 @@
 
 Links from course bookmarks and community lists, tagged by **level** and **week**.
 
+## Course links
+
+| | |
+|---|---|
+| **Registration** | [Cybersec track — CSOT'26](https://csot.devclub.in/tracks/cybersec/register) |
+| **WhatsApp** | [CSOT DevClub: Cybersecurity](https://chat.whatsapp.com/BJN7duZuObq1gbGPrped0y) |
+
+---
+
 | Level | Meaning |
 |-------|---------|
 | **B** | Beginner — start here |

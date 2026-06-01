@@ -131,7 +131,7 @@ No `docker-compose.yml`, no `_infra/` — by design.
 
 ## Assignments (practice — not scored)
 
-These reinforce Week 5 skills before the capstone CTF. **Only CTF flags are scored** (including writeups only if your coordinators ask for them separately — check Discord).
+These reinforce Week 5 skills before the capstone CTF. **Only CTF flags are scored** (including writeups only if your coordinators ask for them separately — check the [course WhatsApp group](https://chat.whatsapp.com/BJN7duZuObq1gbGPrped0y)).
 
 1. **Privesc lab on Metasploitable 2.** Stand up Metasploitable 2 on host-only networking. From a low-privilege foothold (the `msfadmin` user, or via the vsftpd backdoor), identify and document **two distinct** privilege-escalation paths to root. Each path: enumeration command, exploit command, resulting `id` output, and the technique class from [privilege-escalation.md](privilege-escalation.md). One page total.
 
